@@ -1,7 +1,12 @@
 "use client";
 import { Portal } from "react-portal";
 
-export default function Dialog({ isOpen, title, children, closePortal }) {
+export default function Dialog({
+  isOpen = true,
+  title,
+  children,
+  closePortal,
+}) {
   return (
     <>
       {isOpen && (
