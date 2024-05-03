@@ -1,0 +1,15 @@
+.yearStyle {
+  border: "1px #353535 solid";
+  border-radius: "4px";
+  padding: "4px 10px 4px 10px ";
+  font-size: "medium";
+}
+
+.myCard {
+  width: "280px";
+  background-color: "#424242";
+}
+
+.mytextcolor {
+  color: "#939393";
+}
