@@ -5,7 +5,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "image.tmdb.org",
-        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
       },
     ],
   },

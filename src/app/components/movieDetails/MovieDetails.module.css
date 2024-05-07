@@ -1,27 +1,27 @@
 .ratingStyle {
-  border: "1px #b2b2b2 solid";
-  border-radius: "40px";
-  padding: "5px";
-  font-size: "large";
-  width: "fit-content";
-  color: "#FFFFFF";
+  border: 1px #b2b2b2 solid;
+  border-radius: 40px;
+  padding: 5px;
+  font-size: large;
+  width: fit-content;
+  color: #ffffff;
 }
 
 .redText {
-  color: "#F65261";
+  color: #f65261;
 }
 
 .whiteText {
-  color: "#FFFFFF";
+  color: #ffffff;
 }
 
 .greyText {
-  color: "#939393";
-  text-align: "Justify";
+  color: #939393;
+  text-align: Justify;
 }
 
 .myTile {
-  background-color: "#424242";
-  padding: "5px";
-  margin-top: "20px";
+  background-color: #424242;
+  padding: 5px;
+  margin-top: 20px;
 }

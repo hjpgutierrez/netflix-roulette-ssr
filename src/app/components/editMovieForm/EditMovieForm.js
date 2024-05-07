@@ -31,7 +31,7 @@ const EditMovieForm = ({ movieItem }) => {
   };
 
   return (
-    <Dialog isOpen={true} title={"Edit Movie"} closePortal={onCloseModal}>
+    <Dialog title={"Edit Movie"} closePortal={onCloseModal}>
       <MovieForm
         movie={movieItem}
         onSubmit={onSubmit}

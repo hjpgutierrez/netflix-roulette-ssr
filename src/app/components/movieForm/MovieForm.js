@@ -22,10 +22,11 @@ const displayList = [
 var ISO_8601 =
   /^\d{4}(-\d\d(-\d\d(T\d\d:\d\d(:\d\d)?(\.\d+)?(([+-]\d\d:\d\d)|Z)?)?)?)?$/i;
 
-function MovieForm({ movie, onSubmit }) {
+function MovieForm({ movie, onSubmit, setSelectedGenres }) {
   let movieEdit = {};
   if (movie) {
     movieEdit = movie;
+    setSelectedGenres(movieEdit.genres);
   }
 
   const {

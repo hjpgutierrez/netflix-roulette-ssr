@@ -28,8 +28,8 @@ export default async function DashboardLayout({ children }) {
   ));
 
   const content = (
-    <div className="container">
-      {children}
+    <>
+      <div className="container">{children}</div>
       <div className="container">
         <div className="mt-4 p-5 movieListContainer text-white">
           <div className="row">
@@ -59,7 +59,7 @@ export default async function DashboardLayout({ children }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 
   return content;

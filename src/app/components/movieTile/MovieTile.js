@@ -38,13 +38,13 @@ export default function MovieTile({ movie }) {
         </Link>
         <MovieImage urlImage={movie.urlImage} />
         <div className="card-body" onClick={(movie) => onClick(movie)}>
-          <h5 className={`${styles.myTextColor} card-title`}>
+          <h5 className={`${styles.mytextcolor} card-title`}>
             {movie.name}
             <small className={`${styles.yearStyle} card-text float-end`}>
               {movie.releaseYear}
             </small>
           </h5>
-          <small className={`${styles.myTextColor} card-text`}>
+          <small className={`${styles.mytextcolor} card-text`}>
             {joinGenres(movie.genres)}
           </small>
         </div>

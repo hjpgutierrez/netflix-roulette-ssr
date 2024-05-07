@@ -5,7 +5,7 @@ import styles from "./MovieDetails.module.css";
 import { joinGenres } from "../../lib/Utility.js";
 import { useRouter } from "next/navigation";
 
-export default function MovieDetails({ movie, onClose }) {
+export default function MovieDetails({ movie }) {
   const router = useRouter();
   if (!movie) return null;
 
@@ -30,8 +30,8 @@ export default function MovieDetails({ movie, onClose }) {
             <Image
               src={`/searchIcon.png`}
               alt="SearchIcon"
-              width={400}
-              height={300}
+              width={100}
+              height={100}
               onClick={onCloseMovieDetails}
             />
           </div>
