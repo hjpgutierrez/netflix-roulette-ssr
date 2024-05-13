@@ -1,21 +1,23 @@
 "use client";
 import MoviesContainer from "../components/moviesContainer/MoviesContainer";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default async function DashboardLayout(props) {
   const pathname = usePathname();
-  console.log("URL", pathname);
+  const searchParams = useSearchParams();
+  const search = searchParams.get("query");
   let activeGenre = "";
   let urlRequest =
     "http://localhost:4000/movies?limit=30&sortBy=release_date&sortOrder=desc";
-  if (pathname.includes("genre")) {
+  if (search) {
+    urlRequest = `http://localhost:4000/movies?search=${search}&searchBy=title&limit=30&sortBy=release_date&sortOrder=desc`;
+  } else if (pathname.includes("genre")) {
     activeGenre = pathname.split("/")[3];
     urlRequest = `http://localhost:4000/movies?filter=${activeGenre}&limit=30&sortBy=release_date&sortOrder=desc`;
   }
 
   const content = (
     <>
-      <p>{pathname}</p>
       <div className="container">{props.children}</div>
       <MoviesContainer
         activeGenre={activeGenre}
