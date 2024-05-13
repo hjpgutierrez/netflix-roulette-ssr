@@ -127,3 +127,12 @@ code {
   display: block;
   position: absolute;
 }
+
+.more-icon {
+  display: none;
+}
+
+.card-body:hover .more-icon {
+  display: block;
+  position: absolute;
+}

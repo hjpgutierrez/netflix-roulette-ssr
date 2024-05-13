@@ -2,8 +2,6 @@
 import Link from "next/link";
 
 const SearchForm = () => {
-  const onSearch = () => {};
-
   return (
     <div className="bg-opacity mt-4 p-5 text-white">
       <div className="content text-white">
@@ -36,9 +34,7 @@ const SearchForm = () => {
             </div>
           </div>
           <div className="col-3">
-            <button className="btn btn-danger btn-lg" onClick={onSearch}>
-              Search
-            </button>
+            <button className="btn btn-danger btn-lg">Search</button>
           </div>
         </div>
       </div>

@@ -1,17 +1,12 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import MovieImage from "../movieImage/MovieImage.js";
 import styles from "./MovieDetails.module.css";
 import { joinGenres } from "../../lib/Utility.js";
-import { useRouter } from "next/navigation";
 
 export default function MovieDetails({ movie }) {
-  const router = useRouter();
   if (!movie) return null;
-
-  const onCloseMovieDetails = () => {
-    router.push("/dashboard");
-  };
 
   return (
     <div className={`${styles.myTile} row`}>
@@ -27,13 +22,14 @@ export default function MovieDetails({ movie }) {
             <p className={styles.ratingStyle}>{movie.rating}</p>
           </div>
           <div className="col-2 float-end">
-            <Image
-              src={`/searchIcon.png`}
-              alt="SearchIcon"
-              width={100}
-              height={100}
-              onClick={onCloseMovieDetails}
-            />
+            <Link href={"/dashboard"}>
+              <Image
+                src={`/searchIcon.png`}
+                alt="SearchIcon"
+                width={100}
+                height={100}
+              />
+            </Link>
           </div>
         </div>
         <div className="row">

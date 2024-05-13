@@ -3,10 +3,8 @@ import { useState } from "react";
 import Dialog from "../dialog/Dialog";
 import MovieForm from "../movieForm/MovieForm";
 import { ToDto } from "../../lib/Utility";
-import { useRouter } from "next/navigation";
 
 const EditMovieForm = ({ movieItem }) => {
-  const router = useRouter();
   let [selectedGenres, setSelectedGenres] = useState([]);
 
   const onSubmit = (data) => {
@@ -26,12 +24,8 @@ const EditMovieForm = ({ movieItem }) => {
       .then((json) => console.log(json));
   };
 
-  const onCloseModal = () => {
-    router.push("/dashboard");
-  };
-
   return (
-    <Dialog title={"Edit Movie"} closePortal={onCloseModal}>
+    <Dialog title={"Edit Movie"}>
       <MovieForm
         movie={movieItem}
         onSubmit={onSubmit}

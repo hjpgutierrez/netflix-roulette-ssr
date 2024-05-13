@@ -1,33 +1,27 @@
 "use client";
-const GenreFilter = ({ genresToDisplay, activeGenre }) => {
-  const onClick = (genre) => {
-    console.log(genre);
-  };
+import Link from "next/link";
 
+const GenreFilter = ({ genresToDisplay, activeGenre }) => {
   let genreFilters = genresToDisplay.map((genre) => (
     <li className="nav-item" key={genre}>
-      <span
+      <Link
         className={"nav-link " + (activeGenre === genre ? "active" : "")}
-        onClick={() => {
-          onClick(genre);
-        }}
+        href={`/dashboard/genre/${genre}`}
       >
         {genre}
-      </span>
+      </Link>
     </li>
   ));
 
   const content = (
     <ul className="nav">
       <li className="nav-item">
-        <span
+        <Link
           className={"nav-link " + (activeGenre === "" ? "active" : "")}
-          onClick={() => {
-            onClick("");
-          }}
+          href={`/dashboard`}
         >
           ALL
-        </span>
+        </Link>
       </li>
       {genreFilters}
     </ul>
